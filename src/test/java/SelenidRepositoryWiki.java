@@ -29,7 +29,8 @@ public class SelenidRepositoryWiki {
         open("https://github.com/");
         $("[data-target='qbsearch-input.inputButtonText']").click();
         $("[data-target='query-builder.input']").setValue("selenide").pressEnter();
-        $(".lmmHGT").click();
+//        $(".lmmHGT").click();
+        $(".search-results-page").$(byText("More")).click();
         $("[data-testid='nav-item-wikis']").click();
         $("a[href='/YuriKopshev/selenide/wiki/SoftAssertions'].bJBoUI").click();
         $(".markdown-body").
@@ -49,5 +50,6 @@ public class SelenidRepositoryWiki {
                             $("#second").should(visible).click();
                           }
                         }"""));
+        sleep(5000);
     }
 }
