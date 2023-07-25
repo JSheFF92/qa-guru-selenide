@@ -34,8 +34,8 @@ public class SelenidRepositoryWiki {
         $("div.search-title a").click();
         $("#wiki-tab").click();
 
-        $(".f6.Link--muted.js-wiki-more-pages-link.btn-link.mx-auto").click();
-        $("a[href='/selenide/selenide/wiki/SoftAssertions']").shouldHave(text("SoftAssertions"));
+        $("#wiki-pages-box button").click();
+        $("#wiki-pages-box").shouldHave(text("SoftAssertions"));
 
         $("[href='/selenide/selenide/wiki/SoftAssertions']").click();
 
@@ -56,6 +56,5 @@ public class SelenidRepositoryWiki {
                             $("#second").should(visible).click();
                           }
                         }"""));
-        sleep(5000);
     }
 }
